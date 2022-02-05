@@ -6,6 +6,8 @@ namespace PingUI.ViewModel
 {
     public class MainViewModel
     {
+        private const string DEFAULT_RESULT_DATA = "-";
+
         private PingResult pingResult;
         private string address;
         private Ping ping;
@@ -14,12 +16,13 @@ namespace PingUI.ViewModel
         {
             pingResult = new PingResult()
             {
-                Address = "-",
-                Status = "-",
-                Time = "-"
+                Address = DEFAULT_RESULT_DATA,
+                Status = DEFAULT_RESULT_DATA,
+                Time = DEFAULT_RESULT_DATA
             };
 
             ping = new Ping();
+            address = string.Empty;
 
             CloseApp = new DelegateCommand((o) => this.CloseApplication());
             Ping = new DelegateCommand((o) => this.PingAddress());
@@ -57,8 +60,6 @@ namespace PingUI.ViewModel
 
         public DelegateCommand CloseApp { get; set; }
         public DelegateCommand Ping { get; set; }
-        public EventHandler HideResults { get; set; }
-        public EventHandler ShowResults { get; set; }
 
         private void CloseApplication()
         {
@@ -74,9 +75,9 @@ namespace PingUI.ViewModel
             }
             catch (Exception ex)
             {
-                PingResult.Address = "-";
+                PingResult.Address = DEFAULT_RESULT_DATA;
                 PingResult.Status = IPStatus.Unknown.ToString();
-                PingResult.Time = "-";
+                PingResult.Time = DEFAULT_RESULT_DATA;
                 return;
             }
 

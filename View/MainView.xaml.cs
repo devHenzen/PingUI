@@ -15,9 +15,6 @@ using PingUI.ViewModel;
 
 namespace PingUI.View
 {
-    /// <summary>
-    /// Interaktionslogik für MainView.xaml
-    /// </summary>
     public partial class MainView : Window
     {
         public MainView()

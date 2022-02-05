@@ -9,6 +9,11 @@ namespace PingUI.Model
         private string status;
         private string time;
 
+        /// <summary>
+        /// Responding ipv4 / ipv6 address 
+        /// usually type IPAddress
+        /// string, in order to have more control on how data gets displayed
+        /// </summary>
         public string Address
         {
             get
@@ -25,6 +30,11 @@ namespace PingUI.Model
             }
         }
 
+        /// <summary>
+        /// Status of the ping
+        /// usually type IPStatus
+        /// string, in order to have more control on how data gets displayed
+        /// </summary>
         public string Status
         {
             get
@@ -41,6 +51,11 @@ namespace PingUI.Model
             }
         }
 
+        /// <summary>
+        /// Time needed to complete the ping process
+        /// usually type long
+        /// string, in order to have more control on how data gets displayed
+        /// </summary>
         public string Time
         {
             get
