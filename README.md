@@ -6,7 +6,7 @@ A .NET WPF project providing UI to the C# Ping functionality.
 
 ### Copyright Notice
 
-This repository is not licensed at all. The use of this repository is restricted by the licenses of the following included resources.
+The use of this repository is restricted by the licenses of the following included resources.
 
 #### Flaticon Icons:
 
